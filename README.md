@@ -4,6 +4,10 @@
 
 <https://user-managerment-twendee.onrender.com/>
 
+## Self-review
+
+<https://www.loom.com/share/0beb44b675f24574a09df3f6fc141f59>
+
 ## Intall
 
 After clone this repository. At root folder, run following command to run in production mode.
