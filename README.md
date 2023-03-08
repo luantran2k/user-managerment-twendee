@@ -6,15 +6,17 @@
 
 ## Intall
 
-After clone this repository. At root folder, run following command to run.
+After clone this repository. At root folder, run following command to run in production mode.
 
 ```bash
 # with yarn
 yarn
+yarn build
 yarn preview
 
 # with npm
 npm i
+npm run build
 npm run preview
 ```
 

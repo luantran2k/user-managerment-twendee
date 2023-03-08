@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
-import { getUsers } from "../../apis/user";
+import { getAllUsers } from "../../apis/user";
 import UserTable from "../../components/UserTable";
 import { compareStrings } from "../../helpers/utils";
 import IUser from "../../interfaces/User";
@@ -53,7 +53,7 @@ export default function UserManagementWithSort(
     const { page, results, sortBy } = useUserStore();
     const usersQuery = useQuery({
         queryKey: ["users"],
-        queryFn: () => getUsers({ page: 0, results: 100 }),
+        queryFn: () => getAllUsers(),
         staleTime: Infinity,
     });
     const { data, isError, isLoading } = usersQuery;

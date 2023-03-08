@@ -8,6 +8,7 @@ export const getUsers = async (filter: Omit<IUserFilter, "sortBy">) => {
     const { data } = await request.get<ApiResponse<IUser[]>>("", {
         params: {
             ...filter,
+            page: filter.page + 1, // Page api start from 1.
             seed: SEED,
         },
     });
@@ -17,7 +18,7 @@ export const getUsers = async (filter: Omit<IUserFilter, "sortBy">) => {
 export const getAllUsers = async () => {
     const { data } = await request.get<ApiResponse<IUser[]>>("", {
         params: {
-            page: 0,
+            page: 1,
             results: 100,
             seed: SEED,
         },
